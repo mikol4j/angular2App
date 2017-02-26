@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import {ProductService} from './products/product.service'
 @Component({
     selector: 'pm-app',
     template:
@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
         <div><h1>{{pageTitle}}</h1>
         <pm-products>Product-list nested component loading...</pm-products>
         </div>
-    `
+    `,
+    providers: [ProductService]
 })
 export class AppComponent {
     pageTitle: string = `Acme Product Managment`
