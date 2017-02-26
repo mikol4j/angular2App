@@ -18,7 +18,7 @@ require("rxjs/add/operator/map");
 var ProductService = (function () {
     function ProductService(_http) {
         this._http = _http;
-        this._productUrl = 'api/products/product.json';
+        this._productUrl = 'api/products/products.json';
     }
     ProductService.prototype.getProducts = function () {
         return this._http.get(this._productUrl)
