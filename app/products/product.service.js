@@ -11,6 +11,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
+var Observable_1 = require("rxjs/Observable");
+require("rxjs/add/operator/catch");
+require("rxjs/add/operator/do");
 require("rxjs/add/operator/map");
 var ProductService = (function () {
     function ProductService(_http) {
@@ -18,7 +21,14 @@ var ProductService = (function () {
         this._productUrl = 'api/products/product.json';
     }
     ProductService.prototype.getProducts = function () {
-        return this._http.get(this._productUrl).map(function (response) { return response.json(); });
+        return this._http.get(this._productUrl)
+            .map(function (response) { return response.json(); })
+            .do(function (data) { return console.log('All: ' + JSON.stringify(data)); })
+            .catch(this.hadleError);
+    };
+    ProductService.prototype.hadleError = function (error) {
+        console.error(error);
+        return Observable_1.Observable.throw(error.json().errror || 'Server error');
     };
     return ProductService;
 }());
