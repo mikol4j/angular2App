@@ -7,21 +7,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var StarCompoment = (function () {
-    function StarCompoment() {
+var StarComponent = (function () {
+    function StarComponent() {
         this.rating = 4;
     }
-    StarCompoment.prototype.ngOnChanges = function () {
+    StarComponent.prototype.ngOnChanges = function () {
         this.starWidth = this.rating * 86 / 5;
     };
-    return StarCompoment;
+    return StarComponent;
 }());
-StarCompoment = __decorate([
+StarComponent = __decorate([
     core_1.Component({
         selector: 'ai-star',
-        templateUrl: 'app/shared/start.component.html',
+        templateUrl: 'app/shared/star.component.html',
         styleUrls: ['app/shared/star.component.css']
     })
-], StarCompoment);
-exports.StarCompoment = StarCompoment;
+], StarComponent);
+exports.StarComponent = StarComponent;
 //# sourceMappingURL=star.component.js.map

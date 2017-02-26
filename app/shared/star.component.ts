@@ -2,10 +2,10 @@ import {Component, OnChanges} from '@angular/core';
 
 @Component({
     selector: 'ai-star',
-    templateUrl: 'app/shared/start.component.html',
+    templateUrl: 'app/shared/star.component.html',
     styleUrls: ['app/shared/star.component.css']
 })
-export class StarCompoment implements OnChanges{
+export class StarComponent implements OnChanges{
 rating: number = 4;
 starWidth: number;
 ngOnChanges() :void
