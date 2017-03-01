@@ -10,6 +10,7 @@ import {ProductService} from './products/product.service'
         <ul class='nav navbar-nav'>
         <li><a [routerLink]="['/welcome']">Home</a></li>
         <li><a [routerLink]="['/products']">Product list</a></li>
+        <li><a [routerLink]="['/warehouse']">Warehouse</a></li>
         </ul>
         </div>
         </nav>   
