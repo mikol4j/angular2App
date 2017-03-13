@@ -11,18 +11,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
+var product_service_1 = require("./product.service");
 var ProductDetailComponent = (function () {
-    /**
-     *
-     */
-    function ProductDetailComponent(_route, _router) {
+    function ProductDetailComponent(_route, _router, _productService) {
         this._route = _route;
         this._router = _router;
+        this._productService = _productService;
         this.pageTitle = 'Product Detail';
+        this.id = 0;
     }
     ProductDetailComponent.prototype.ngOnInit = function () {
-        var id = +this._route.snapshot.params['id'];
-        this.pageTitle += " : " + id;
+        this.id = +this._route.snapshot.params['id'];
+        this.pageTitle += " : " + this.id;
+        this.product = this._productService.getProduct(this.id);
     };
     ProductDetailComponent.prototype.onBack = function () {
         this._router.navigate(['/products']);
@@ -33,7 +34,7 @@ ProductDetailComponent = __decorate([
     core_1.Component({
         templateUrl: 'app/products/product-detail.component.html',
     }),
-    __metadata("design:paramtypes", [router_1.ActivatedRoute, router_1.Router])
+    __metadata("design:paramtypes", [router_1.ActivatedRoute, router_1.Router, product_service_1.ProductService])
 ], ProductDetailComponent);
 exports.ProductDetailComponent = ProductDetailComponent;
 //# sourceMappingURL=product-detail.component.js.map

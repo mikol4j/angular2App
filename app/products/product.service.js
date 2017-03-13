@@ -17,8 +17,10 @@ require("rxjs/add/operator/do");
 require("rxjs/add/operator/map");
 var ProductService = (function () {
     function ProductService(_http) {
+        var _this = this;
         this._http = _http;
         this._productUrl = 'api/products/products.json';
+        this.getProducts().subscribe(function (products) { return _this.products = products; });
     }
     ProductService.prototype.getProducts = function () {
         return this._http.get(this._productUrl)
@@ -29,6 +31,9 @@ var ProductService = (function () {
     ProductService.prototype.hadleError = function (error) {
         console.error(error);
         return Observable_1.Observable.throw(error.json().errror || 'Server error');
+    };
+    ProductService.prototype.getProduct = function (productID) {
+        return this.products.find(function (a) { return a.productId == productID; });
     };
     return ProductService;
 }());

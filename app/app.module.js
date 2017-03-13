@@ -18,6 +18,8 @@ var star_component_1 = require("./shared/star.component");
 var product_detail_component_1 = require("./products/product-detail.component");
 var welcome_component_1 = require("./home/welcome.component");
 var product_guard_service_1 = require("./products/product-guard.service");
+var angular2_jwt_1 = require("angular2-jwt");
+var auth_service_1 = require("./auth.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -37,7 +39,7 @@ AppModule = __decorate([
             ])],
         declarations: [app_component_1.AppComponent, product_list_component_1.ProductListComponent, product_filter_pipe_1.ProductFilterPipe, star_component_1.StarComponent,
             product_detail_component_1.ProductDetailComponent, welcome_component_1.WelcomeComponent],
-        providers: [product_guard_service_1.ProductDetailGuard],
+        providers: [product_guard_service_1.ProductDetailGuard, angular2_jwt_1.AUTH_PROVIDERS, auth_service_1.Auth],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

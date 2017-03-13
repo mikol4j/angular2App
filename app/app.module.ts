@@ -11,6 +11,8 @@ import { StarComponent }  from './shared/star.component';
 import { ProductDetailComponent }  from './products/product-detail.component';
 import { WelcomeComponent }  from './home/welcome.component';
 import { ProductDetailGuard }  from './products/product-guard.service';
+import { AUTH_PROVIDERS }      from 'angular2-jwt';
+import { Auth }              from './auth.service';
 
 @NgModule({
   imports: [ BrowserModule, FormsModule,HttpModule,
@@ -25,7 +27,7 @@ import { ProductDetailGuard }  from './products/product-guard.service';
   ])],
   declarations: [ AppComponent,ProductListComponent, ProductFilterPipe, StarComponent,
   ProductDetailComponent, WelcomeComponent ],
-  providers:[ProductDetailGuard],
+  providers:[ProductDetailGuard,AUTH_PROVIDERS,Auth],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
