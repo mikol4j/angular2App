@@ -12,14 +12,11 @@ import { Auth }              from './auth.service';
         <ul class='nav navbar-nav'>
         <li><a [routerLink]="['/welcome']">Home</a></li>
         <li><a [routerLink]="['/products']">Product list</a></li>
-        <li><a [routerLink]="['/warehouse']">Warehouse</a></li>
+        <li><a [routerLink]="['/warehouse']" *ngIf="auth.authenticated()">Warehouse</a></li>
+        <li class="navbar"><a (click)="auth.login()" *ngIf="!auth.authenticated()">Log In</a></li>
+        <li class="navbar"><a (click)="auth.logout()" *ngIf="auth.authenticated()">Log Out</a></li>
         </ul>
         </div>
-          <div class="navbar-header">
-  <a class="navbar-brand" href="#">Auth0 - Angular 2</a>
-  <button class="btn btn-primary btn-margin" (click)="auth.login()" *ngIf="!auth.authenticated()">Log In</button>
-  <button class="btn btn-primary btn-margin" (click)="auth.logout()" *ngIf="auth.authenticated()">Log Out</button>
-</div>
         </nav>   
         <div class='container'>
         <router-outlet></router-outlet>
