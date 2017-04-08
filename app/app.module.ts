@@ -13,6 +13,7 @@ import { WelcomeComponent }  from './home/welcome.component';
 import { ProductDetailGuard }  from './products/product-guard.service';
 import { AUTH_PROVIDERS }      from 'angular2-jwt';
 import { Auth }              from './auth.service';
+import { WarehouseComponent}         from './warehouse/warehouse.component';
 
 @NgModule({
   imports: [ BrowserModule, FormsModule,HttpModule,
@@ -22,11 +23,12 @@ import { Auth }              from './auth.service';
      canActivate:[ProductDetailGuard],
      component: ProductDetailComponent},
     {path: 'welcome', component: WelcomeComponent},
+    {path: 'warehouse', component: WarehouseComponent},
     {path: '', redirectTo: 'welcome',pathMatch: 'full'},
     {path: '**', redirectTo: 'welcome',pathMatch: 'full'},
   ])],
   declarations: [ AppComponent,ProductListComponent, ProductFilterPipe, StarComponent,
-  ProductDetailComponent, WelcomeComponent ],
+  ProductDetailComponent, WelcomeComponent,WarehouseComponent ],
   providers:[ProductDetailGuard,AUTH_PROVIDERS,Auth],
   bootstrap: [ AppComponent ]
 })
