@@ -1,0 +1,16 @@
+[
+    {
+        "Id": 1,
+        "question": "We don't visit you very often because you live so far away.",
+        "answer": "If you didn't live so far away, we we'd visit you more often.",
+        "keys": ["didn't", "did not", "we'd","we'd"]
+
+    },
+    {
+        "Id": 2,
+        "question": "He doesn't speak very clearly - that's why people don't understand him.",
+        "answer": "If he spoke more clearly, people would undestand him.",
+        "keys": ["spoke","people'd","would"] //when we can use 
+
+    }
+]
