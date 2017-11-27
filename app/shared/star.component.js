@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var StarComponent = (function () {
+var StarComponent = /** @class */ (function () {
     function StarComponent() {
         this.ratingClicked = new core_1.EventEmitter();
     }
@@ -20,22 +20,22 @@ var StarComponent = (function () {
     StarComponent.prototype.onClick = function () {
         this.ratingClicked.emit("The rating " + this.rating + " was clicked!");
     };
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Number)
+    ], StarComponent.prototype, "rating", void 0);
+    __decorate([
+        core_1.Output(),
+        __metadata("design:type", core_1.EventEmitter)
+    ], StarComponent.prototype, "ratingClicked", void 0);
+    StarComponent = __decorate([
+        core_1.Component({
+            selector: 'ai-star',
+            templateUrl: 'app/shared/star.component.html',
+            styleUrls: ['app/shared/star.component.css']
+        })
+    ], StarComponent);
     return StarComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Number)
-], StarComponent.prototype, "rating", void 0);
-__decorate([
-    core_1.Output(),
-    __metadata("design:type", core_1.EventEmitter)
-], StarComponent.prototype, "ratingClicked", void 0);
-StarComponent = __decorate([
-    core_1.Component({
-        selector: 'ai-star',
-        templateUrl: 'app/shared/star.component.html',
-        styleUrls: ['app/shared/star.component.css']
-    })
-], StarComponent);
 exports.StarComponent = StarComponent;
 //# sourceMappingURL=star.component.js.map

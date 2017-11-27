@@ -11,18 +11,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var auth_service_1 = require("../auth.service");
-var WelcomeComponent = (function () {
+var WelcomeComponent = /** @class */ (function () {
     function WelcomeComponent(auth) {
         this.auth = auth;
         this.pageTitle = 'Welcome';
     }
+    WelcomeComponent = __decorate([
+        core_1.Component({
+            templateUrl: 'app/home/welcome.component.html'
+        }),
+        __metadata("design:paramtypes", [auth_service_1.Auth])
+    ], WelcomeComponent);
     return WelcomeComponent;
 }());
-WelcomeComponent = __decorate([
-    core_1.Component({
-        templateUrl: 'app/home/welcome.component.html'
-    }),
-    __metadata("design:paramtypes", [auth_service_1.Auth])
-], WelcomeComponent);
 exports.WelcomeComponent = WelcomeComponent;
 //# sourceMappingURL=welcome.component.js.map

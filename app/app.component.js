@@ -12,20 +12,20 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var product_service_1 = require("./products/product.service");
 var auth_service_1 = require("./auth.service");
-var AppComponent = (function () {
+var AppComponent = /** @class */ (function () {
     function AppComponent(auth) {
         this.auth = auth;
         this.pageTitle = "Acme Product Managment";
     }
+    AppComponent = __decorate([
+        core_1.Component({
+            selector: 'pm-app',
+            template: "   \n        <nav class='navbar navbar-default'>\n        <div class='container-fluid'>\n        <a class='navbar-brand'> {{pageTitle}}</a>\n        <ul class='nav navbar-nav'>\n        <li><a [routerLink]=\"['/welcome']\">Home</a></li>\n        <li><a [routerLink]=\"['/products']\">Product list</a></li>\n        <li><a [routerLink]=\"['/warehouse']\" *ngIf=\"auth.authenticated()\">Warehouse</a></li>\n        <li class=\"navbar\"><a (click)=\"auth.login()\" *ngIf=\"!auth.authenticated()\">Log In</a></li>\n        <li class=\"navbar\"><a (click)=\"auth.logout()\" *ngIf=\"auth.authenticated()\">Log Out</a></li>\n        </ul>\n        </div>\n        </nav>   \n        <div class='container'>\n        <router-outlet></router-outlet>\n        </div>\n    ",
+            providers: [product_service_1.ProductService]
+        }),
+        __metadata("design:paramtypes", [auth_service_1.Auth])
+    ], AppComponent);
     return AppComponent;
 }());
-AppComponent = __decorate([
-    core_1.Component({
-        selector: 'pm-app',
-        template: "   \n        <nav class='navbar navbar-default'>\n        <div class='container-fluid'>\n        <a class='navbar-brand'> {{pageTitle}}</a>\n        <ul class='nav navbar-nav'>\n        <li><a [routerLink]=\"['/welcome']\">Home</a></li>\n        <li><a [routerLink]=\"['/products']\">Product list</a></li>\n        <li><a [routerLink]=\"['/warehouse']\" *ngIf=\"auth.authenticated()\">Warehouse</a></li>\n        <li class=\"navbar\"><a (click)=\"auth.login()\" *ngIf=\"!auth.authenticated()\">Log In</a></li>\n        <li class=\"navbar\"><a (click)=\"auth.logout()\" *ngIf=\"auth.authenticated()\">Log Out</a></li>\n        </ul>\n        </div>\n        </nav>   \n        <div class='container'>\n        <router-outlet></router-outlet>\n        </div>\n    ",
-        providers: [product_service_1.ProductService]
-    }),
-    __metadata("design:paramtypes", [auth_service_1.Auth])
-], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

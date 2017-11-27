@@ -1,5 +1,5 @@
-// app/auth.service.ts
 "use strict";
+// app/auth.service.ts
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -13,7 +13,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var angular2_jwt_1 = require("angular2-jwt");
 var auth_config_1 = require("./auth.config");
-var Auth = (function () {
+var Auth = /** @class */ (function () {
     function Auth() {
         // Configure Auth0
         this.lock = new Auth0Lock(auth_config_1.myConfig.clientID, auth_config_1.myConfig.domain, {});
@@ -35,11 +35,11 @@ var Auth = (function () {
         // Remove token from localStorage
         localStorage.removeItem('id_token');
     };
+    Auth = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [])
+    ], Auth);
     return Auth;
 }());
-Auth = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [])
-], Auth);
 exports.Auth = Auth;
 //# sourceMappingURL=auth.service.js.map

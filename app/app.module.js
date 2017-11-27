@@ -21,29 +21,29 @@ var product_guard_service_1 = require("./products/product-guard.service");
 var angular2_jwt_1 = require("angular2-jwt");
 var auth_service_1 = require("./auth.service");
 var warehouse_component_1 = require("./warehouse/warehouse.component");
-var AppModule = (function () {
+var AppModule = /** @class */ (function () {
     function AppModule() {
     }
+    AppModule = __decorate([
+        core_1.NgModule({
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule,
+                router_1.RouterModule.forRoot([
+                    { path: 'products', component: product_list_component_1.ProductListComponent },
+                    { path: 'product/:id',
+                        canActivate: [product_guard_service_1.ProductDetailGuard],
+                        component: product_detail_component_1.ProductDetailComponent },
+                    { path: 'welcome', component: welcome_component_1.WelcomeComponent },
+                    { path: 'warehouse', component: warehouse_component_1.WarehouseComponent },
+                    { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+                    { path: '**', redirectTo: 'welcome', pathMatch: 'full' },
+                ])],
+            declarations: [app_component_1.AppComponent, product_list_component_1.ProductListComponent, product_filter_pipe_1.ProductFilterPipe, star_component_1.StarComponent,
+                product_detail_component_1.ProductDetailComponent, welcome_component_1.WelcomeComponent, warehouse_component_1.WarehouseComponent],
+            providers: [product_guard_service_1.ProductDetailGuard, angular2_jwt_1.AUTH_PROVIDERS, auth_service_1.Auth],
+            bootstrap: [app_component_1.AppComponent]
+        })
+    ], AppModule);
     return AppModule;
 }());
-AppModule = __decorate([
-    core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule,
-            router_1.RouterModule.forRoot([
-                { path: 'products', component: product_list_component_1.ProductListComponent },
-                { path: 'product/:id',
-                    canActivate: [product_guard_service_1.ProductDetailGuard],
-                    component: product_detail_component_1.ProductDetailComponent },
-                { path: 'welcome', component: welcome_component_1.WelcomeComponent },
-                { path: 'warehouse', component: warehouse_component_1.WarehouseComponent },
-                { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-                { path: '**', redirectTo: 'welcome', pathMatch: 'full' },
-            ])],
-        declarations: [app_component_1.AppComponent, product_list_component_1.ProductListComponent, product_filter_pipe_1.ProductFilterPipe, star_component_1.StarComponent,
-            product_detail_component_1.ProductDetailComponent, welcome_component_1.WelcomeComponent, warehouse_component_1.WarehouseComponent],
-        providers: [product_guard_service_1.ProductDetailGuard, angular2_jwt_1.AUTH_PROVIDERS, auth_service_1.Auth],
-        bootstrap: [app_component_1.AppComponent]
-    })
-], AppModule);
 exports.AppModule = AppModule;
 //# sourceMappingURL=app.module.js.map

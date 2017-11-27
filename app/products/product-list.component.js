@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var product_service_1 = require("./product.service");
-var ProductListComponent = (function () {
+var ProductListComponent = /** @class */ (function () {
     function ProductListComponent(_productService) {
         this._productService = _productService;
         this.pageTitle = "Product List...";
@@ -31,15 +31,15 @@ var ProductListComponent = (function () {
     ProductListComponent.prototype.onRatingClicked = function (message) {
         this.pageTitle = 'Product List: ' + message;
     };
+    ProductListComponent = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            templateUrl: 'product-list.component.html',
+            styleUrls: ['product-list.component.css']
+        }),
+        __metadata("design:paramtypes", [product_service_1.ProductService])
+    ], ProductListComponent);
     return ProductListComponent;
 }());
-ProductListComponent = __decorate([
-    core_1.Component({
-        moduleId: module.id,
-        templateUrl: 'product-list.component.html',
-        styleUrls: ['product-list.component.css']
-    }),
-    __metadata("design:paramtypes", [product_service_1.ProductService])
-], ProductListComponent);
 exports.ProductListComponent = ProductListComponent;
 //# sourceMappingURL=product-list.component.js.map

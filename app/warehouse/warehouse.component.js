@@ -7,17 +7,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var WarehouseComponent = (function () {
+var WarehouseComponent = /** @class */ (function () {
     function WarehouseComponent() {
     }
+    WarehouseComponent = __decorate([
+        core_1.Component({
+            selector: 'ai-warehouse',
+            templateUrl: 'app/warehouse/warehouse.component.html',
+            styleUrls: ['app/warehouse/warehouse.component.css']
+        })
+    ], WarehouseComponent);
     return WarehouseComponent;
 }());
-WarehouseComponent = __decorate([
-    core_1.Component({
-        selector: 'ai-warehouse',
-        templateUrl: 'app/warehouse/warehouse.component.html',
-        styleUrls: ['app/warehouse/warehouse.component.css']
-    })
-], WarehouseComponent);
 exports.WarehouseComponent = WarehouseComponent;
 //# sourceMappingURL=warehouse.component.js.map

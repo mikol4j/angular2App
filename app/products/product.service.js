@@ -15,7 +15,7 @@ var Observable_1 = require("rxjs/Observable");
 require("rxjs/add/operator/catch");
 require("rxjs/add/operator/do");
 require("rxjs/add/operator/map");
-var ProductService = (function () {
+var ProductService = /** @class */ (function () {
     function ProductService(_http) {
         var _this = this;
         this._http = _http;
@@ -35,11 +35,11 @@ var ProductService = (function () {
     ProductService.prototype.getProduct = function (productID) {
         return this.products.find(function (a) { return a.productId == productID; });
     };
+    ProductService = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [http_1.Http])
+    ], ProductService);
     return ProductService;
 }());
-ProductService = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [http_1.Http])
-], ProductService);
 exports.ProductService = ProductService;
 //# sourceMappingURL=product.service.js.map

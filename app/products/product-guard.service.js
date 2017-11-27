@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var ProductDetailGuard = (function () {
+var ProductDetailGuard = /** @class */ (function () {
     /**
      *
      */
@@ -30,11 +30,11 @@ var ProductDetailGuard = (function () {
         ;
         return true;
     };
+    ProductDetailGuard = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [router_1.Router])
+    ], ProductDetailGuard);
     return ProductDetailGuard;
 }());
-ProductDetailGuard = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [router_1.Router])
-], ProductDetailGuard);
 exports.ProductDetailGuard = ProductDetailGuard;
 //# sourceMappingURL=product-guard.service.js.map
