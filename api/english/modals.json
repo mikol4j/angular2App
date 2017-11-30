@@ -1,0 +1,14 @@
+[
+    {
+        "Id": 1,
+        "modal": "would",
+        "keys": ["would", "'d"]
+
+    },
+    {
+        "Id": 2,
+        "modal": "wouldn't",
+        "keys": ["would not", "wouldn't"]
+
+    }
+]

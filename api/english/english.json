@@ -2,15 +2,104 @@
     {
         "Id": 1,
         "question": "We don't visit you very often because you live so far away.",
-        "answer": "If you didn't live so far away, we we'd visit you more often.",
-        "keys": ["didn't", "did not", "we'd","we'd"]
+        "answer": "If you didn't live so far away, we would visit you more often."
+
 
     },
     {
         "Id": 2,
         "question": "He doesn't speak very clearly - that's why people don't understand him.",
-        "answer": "If he spoke more clearly, people would undestand him.",
-        "keys": ["spoke","people'd","would"] //when we can use 
+        "answer": "If he spoke more clearly, people would undestand him."
+
+    },
+    {
+        "Id": 3,
+        "question": "That book is too expensive, so I'm not going to buy it.",
+        "answer": "If that book wasn't so expensive, I'd buy it."
+
+    },
+    {
+        "Id": 4,
+        "question": "We don't go out very often because we can't afford it.",
+        "answer": "If we could afford it, we'd go out more often."
+
+    },
+    {
+        "Id": 5,
+        "question": "It's raining, so we can't have lunch in the garden.",
+        "answer": "If it wasn't raining, we could have lunch in the garden."
+
+    },
+    {
+        "Id": 6,
+        "question": "I have to work tomorrow evening, so I can't meet you.",
+        "answer": "If I didn't have to work tommorow evening, I would meet you."
+
+    },
+    {
+        "Id": 7,
+        "question": "I can't go out because I haven't got any money.",
+        "answer": "I would go out if I had some money."
+
+    },
+    {
+        "Id": 8,
+        "question": "Steve doesn't like Harry because he talks too much.",
+        "answer": "Steve would like Harry if he didn't talk so much."
+
+    },
+    {
+        "Id": 9,
+        "question": "I get sleepy when I watch a boring film.",
+        "answer": "I wouldn't get sleepy if I watched an interesting film."
+
+    },
+    {
+        "Id": 10,
+        "question": "I get sleepy when I watch a boring film.",
+        "answer": "I wouldn't get sleepy if I watched an interesting film."
+
+    },
+    {
+        "Id": 11,
+        "question": "It's raining so I'll stay at home.",
+        "answer": "I would go out if it stopped lub wasn't raining."
+
+    },
+    {
+        "Id": 12,
+        "question": "I'll be happy when I find a job.",
+        "answer": "I would be happy if I found a job."
+
+    },
+    {
+        "Id": 13,
+        "question": "I can't fix my bike unless my brother helps me.",
+        "answer": "I could fix my bike if my brother helped me."
+
+    },
+    {
+        "Id": 14,
+        "question": "I'll be late for work if I forget to set my alarm.",
+        "answer": "I would be late for work if I forgot to set my alarm."
+
+    },
+    {
+        "Id": 15,
+        "question": "Ask Ernie. He'll know what to do.",
+        "answer": "Ernie would tell you what to do if you asked him."
+
+    },
+    {
+        "Id": 16,
+        "question": "There's no pudding today. We haven't got any milk.",
+        "answer": "I would make lub could make a pudding if we had some milk."
+
+    },
+    {
+        "Id": 17,
+        "question": "Those eggs are old. I can't make an omelette with them.",
+        "answer": "I could make lub would make an omelette if the eggs were not lub weren't old."
 
     }
 ]

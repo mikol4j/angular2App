@@ -1,0 +1,8 @@
+
+
+<div *ngFor="let i of englishArray; let i = index">
+    <span [style.background-color]="check(i) == true ? 'green' : 'red'">{{i.question}}</span>
+<p>
+    <input type="text" [(ngModel)]="i.result" style="width:400px"/>
+</p>
+</div>

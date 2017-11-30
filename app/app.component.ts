@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {ProductService} from './products/product.service';
+import {EnglishService} from './english/english.service';
+
 import { Auth }              from './auth.service';
 
 @Component({
@@ -12,6 +14,7 @@ import { Auth }              from './auth.service';
         <ul class='nav navbar-nav'>
         <li><a [routerLink]="['/welcome']">Home</a></li>
         <li><a [routerLink]="['/products']">Product list</a></li>
+        <li><a [routerLink]="['/english']">English</a></li>
         <li><a [routerLink]="['/warehouse']" *ngIf="auth.authenticated()">Warehouse</a></li>
         <li class="navbar"><a (click)="auth.login()" *ngIf="!auth.authenticated()">Log In</a></li>
         <li class="navbar"><a (click)="auth.logout()" *ngIf="auth.authenticated()">Log Out</a></li>
@@ -22,7 +25,7 @@ import { Auth }              from './auth.service';
         <router-outlet></router-outlet>
         </div>
     `,
-    providers: [ProductService]
+    providers: [ProductService,EnglishService]
 })
 export class AppComponent {
       constructor(private auth: Auth) {}

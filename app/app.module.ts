@@ -6,6 +6,7 @@ import {RouterModule} from '@angular/router';
 
 import { AppComponent }  from './app.component';
 import { ProductListComponent }  from './products/product-list.component';
+import { EnglishComponent }  from './english/english.component';
 import { ProductFilterPipe }  from './products/product-filter.pipe';
 import { StarComponent }  from './shared/star.component';
 import { ProductDetailComponent }  from './products/product-detail.component';
@@ -19,6 +20,7 @@ import { WarehouseComponent}         from './warehouse/warehouse.component';
   imports: [ BrowserModule, FormsModule,HttpModule,
   RouterModule.forRoot([
     {path: 'products', component: ProductListComponent},
+    {path: 'english', component: EnglishComponent},
     {path: 'product/:id',
      canActivate:[ProductDetailGuard],
      component: ProductDetailComponent},
@@ -28,7 +30,7 @@ import { WarehouseComponent}         from './warehouse/warehouse.component';
     {path: '**', redirectTo: 'welcome',pathMatch: 'full'},
   ])],
   declarations: [ AppComponent,ProductListComponent, ProductFilterPipe, StarComponent,
-  ProductDetailComponent, WelcomeComponent,WarehouseComponent ],
+  ProductDetailComponent, WelcomeComponent,WarehouseComponent,EnglishComponent ],
   providers:[ProductDetailGuard,AUTH_PROVIDERS,Auth],
   bootstrap: [ AppComponent ]
 })
